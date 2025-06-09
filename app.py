@@ -75,7 +75,7 @@ if st.button("Predict Loan Approval"):
         prediction = model.predict(input_data)
 
         st.write("Raw prediction from model:", prediction) # Should be 0 or 1
-        st.write("Prediction type:", type(prediction[0])) # Should be numpy.int64 or similar
+       
 
         result = "✅ Approved" if prediction[0] == 1 else "❌ Rejected"
         st.success(f"Loan Status: {result}")
