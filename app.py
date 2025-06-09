@@ -68,13 +68,10 @@ if st.button("Predict Loan Approval"):
             LoanAmount_log
         ]])
 
-        # Print for debugging (remove in final deployment)
-        st.write("Input data fed to model:", input_data)
-        st.write("Shape of input data:", input_data.shape)
-
+      
         prediction = model.predict(input_data)
 
-        st.write("Raw prediction from model:", prediction) # Should be 0 or 1
+     
        
 
         result = "✅ Approved" if prediction[0] == 1 else "❌ Rejected"
